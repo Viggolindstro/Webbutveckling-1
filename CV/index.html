@@ -13,38 +13,57 @@
     .nav-header {
 background-color: rgb(163, 255, 101);
 padding: 16px; 
+display: flex;
+justify-content: center;
   } 
 
 .nav-ul {
     list-style: none;
     display:flex;
-    gap: 30px;
+    gap: 64px;
     justify-content: space-between;
-    min-width: 100%;
-    max-width: 700px;
-    margin: auto;
         }
+        a {
+           transition: all 0.2s ease-in-out
+           text-decoration none;
+           color: #f7f7f7;
+           font-family: arial, helvetica, sans-serif;
+    }
+   a:hover{
+transition: all 0.5s ease-in-out;
+color: #000;
+text-decoration: underline;
+    }
+    main {
+        background-color: rgb(225, 225, 255);
+        display: flex;
+        flex-direction: colour;
+        gap: 64px;
+        padding: 64px;
+    }
+    
     </style>
 </head>
 <body>
         <header class= "nav-header">
             <nav>
               <ul class="nav-ul">
-                <li><a href= "#footer">Om mig</a></li>
-                <li>Utbildning</li>
-                <li>Arbetslivsenfarenhet</li>
-                <li>Tech stack</li>
+                <li><a href="#about-me">Om mig</a></li>
+                <li><a href="#education">Utbildning</a></li>
+                <li><a href="#work">Arbetslivsenfarenhet</a></li>
+                <li><a href="#techstack">Tech stack</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-       <section class="about-me">
-          <h2>Hej och välkommen till mitt CV!</h2>
+       <section class="about-me" id="about-me">
+          <h2>Om mig</h2>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi voluptatem quod nulla expedita facilis odio? Magnam saepe eaque earum aspernatur!</p>
        </section>
 
-       <section>
+       <section id="education">
         <h2>Utbildning</h2>
 
         <div>
@@ -109,8 +128,10 @@ padding: 16px;
          <li>Lorem, ipsum dolor.</li>
          <li>Lorem, ipsum dolor.</li>
         </ol>
+          </div>
+       </section>
     </main>
-    <footer>
+    <footer id="footer">
         <a href="tel:+46733272603">46733272603</a>
         <a href="togerraka@gmail.com">togerraka@gmail.com</a>
     </footer>
