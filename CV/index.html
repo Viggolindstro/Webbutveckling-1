@@ -4,84 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
-
-    <style>
-*{  
-    padding: 0;
-    margin: 0
- }
-    .nav-header {
-background-color: rgb(163, 255, 101);
-padding: 16px; 
-display: flex;
-justify-content: center;
-  } 
-
-.nav-ul {
-    list-style: none;
-    display:flex;
-    gap: 64px;
-    justify-content: space-between;
-        }
-        a {
-           transition: all 0.2s ease-in-out;
-           text-decoration: none;
-           color: #f7f7f7;
-           font-family: arial, helvetica, sans-serif;
-    }
-   a:hover{
-    transition: all 0.5s ease-in-out;
-    color: #000;
-    text-decoration: underline;
-    }
-    main {
-        background-color: rgb(191, 235, 120);
-        display: flex;
-        flex-direction: column;
-        gap: 64px;
-    }
-    .about-me {
-font-family: Arial, Helvetica, sans-serif;
-display: flex;
-flex-direction: column;
-gap: 8px;
-background-color:rgb(150, 223, 82);
-padding: 4rem;
-    }
-    
-    .education {
-        font-family: Arial, Helvetica, sans-serif;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-    article {
-        font-family: Arial, Helvetica, sans-serif;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        background-color:rgb(150, 223, 82);
-        padding: 4rem;
-    }
-    .article-header {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        background-color: rgb(102, 249, 83);
-        font-family: Arial, Helvetica, sans-serif;
-    }
-   ol {
-        list-style: none;
-        line-height: 1.5rem;
-    }
-    
-        .p-header {
-display: flex; 
-flex-direction: column
-        }
-    
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
         <header class= "nav-header">
@@ -126,6 +49,9 @@ flex-direction: column
         </ol>
     </article>
        <section>
+        <hr />
+
+        <section class="work" id="work">
         <h2>Arbetslivsenfarenhet</h2>
 
         <div>
@@ -149,12 +75,13 @@ flex-direction: column
         </ol>
     </article>
        </section>
-       <section id="tech-stack">
+      <hr />
+       <section class="tech-stack id="tech stack">
        <h2>Tech stack</h2>
        <div>
 
        <h4>Programmeringsspråk</h4>
-       <ul>
+       <ul class="tech-stack-ul">
         <li>HTML</li>
         <li>CSS</li>
         <li>Javascript</li>
