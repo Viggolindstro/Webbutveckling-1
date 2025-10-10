@@ -4,65 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
+
+    <style>
+*{  
+    padding: 0;
+    margin: 0
+ }
+    .nav-header {
+background-color: rgb(163, 255, 101);
+padding: 16px; 
+display: flex;
+justify-content: center;
+  } 
+
+.nav-ul {
+    list-style: none;
+    display:flex;
+    gap: 64px;
+    justify-content: space-between;
+        }
+        a {
+           transition: all 0.2s ease-in-out;
+           text-decoration: none;
+           color: #f7f7f7;
+           font-family: arial, helvetica, sans-serif;
+    }
+   a:hover{
+    transition: all 0.5s ease-in-out;
+    color: #000;
+    text-decoration: underline;
+    }
+    main {
+        background-color: rgb(191, 235, 120);
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+    }
+    .about-me {
+font-family: Arial, Helvetica, sans-serif;
+display: flex;
+flex-direction: column;
+gap: 8px;
+background-color:rgb(150, 223, 82);
+padding: 4rem;
+    }
+    
+    .education {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    article {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background-color:rgb(150, 223, 82);
+        padding: 4rem;
+    }
+    .article-header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background-color: rgb(102, 249, 83);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+   ol {
+        list-style: none;
+        line-height: 1.5rem;
+    }
+    
+        .p-header {
+display: flex; 
+flex-direction: column
+        }
+    
+
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Decorative animated rainbow banner -->
-    <div class="page-rainbow" aria-hidden="true"></div>
-    <header class="nav-header">
-            <nav>
-              <ul class="nav-ul">
-                <li><a href="#about-me">Om mig</a></li>
-                <li><a href="#education">Utbildning</a></li>
-                <li><a href="#work">Arbetslivsenfarenhet</a></li>
-                <li><a href="#techstack">Tech stack</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-
-        <!-- Hero image -->
-        <div class="hero container">
-            <img src="img_6191.jpg" alt="Profile photo" class="hero-photo">
-            <div class="hero-text">
-                <h1>Viggo Lindström</h1>
-                <p>Webbutvecklare & teknikentusiast</p>
-            </div>
-        </div>
-
-        <!-- Bark control -->
-        <div class="bark-control container">
-            <button id="bark-btn" class="bark-btn" aria-pressed="false">Bark 🐶</button>
-            <label><input id="auto-bark" type="checkbox"> Auto-bark (on fly)</label>
-        </div>
-
-    <main>
-       <section class="about-me" id="about-me">
-          <h2>Om mig</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi voluptatem quod nulla expedita facilis odio? Magnam saepe eaque earum aspernatur!</p>
-       </section>
-
-       <section class="education" id="education">
-        <h2>Utbildning</h2>
-
-        <article>
-            <header class="article-header">
-
-                <h4>Teknik</h4>
-                <p class="p-header">
-                    <strong>Boberg</strong>
-                    <time datetime="2025-12">Augusti 2025</time>
-                    <span></span>
-                    <time datetime="2025-11">Juni 2028</time>
-                </p>
-            </header>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A ratione, fuga sequi culpa illum tempore nisi iste magni consectetur ad. Quaerat animi expedita accusantium ipsa quae maxime vitae eos fuga!
-
-            <ol>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
+        <header class= "nav-header">
+@@ -126,6 +49,9 @@
         </ol>
     </article>
        <section>
@@ -72,32 +96,18 @@
         <h2>Arbetslivsenfarenhet</h2>
 
         <div>
-            <header class="article-header">
-
-                <h4>Teknik</h4>
-                <p>
-                    <strong>Boberg</strong>
-                    <time datetime="2025-12">Augusti 2025</time>
-                    <span></span>
-                    <time datetime="2025-07">Juni 2028</time>
-                </p>
-            </header class="article-header">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A ratione, fuga sequi culpa illum tempore nisi iste magni consectetur ad. Quaerat animi expedita accusantium ipsa quae maxime vitae eos fuga!
-
-            <ol>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
+@@ -149,32 +75,33 @@
         </ol>
     </article>
        </section>
+       <section id="tech-stack">
       <hr />
        <section class="tech-stack id="tech stack">
        <h2>Tech stack</h2>
        <div>
 
        <h4>Programmeringsspråk</h4>
+       <ul>
        <ul class="tech-stack-ul">
         <li>HTML</li>
         <li>CSS</li>
@@ -116,153 +126,9 @@
           </div>
        </section>
     </main>
-    <!-- Dogs section -->
-    <section class="dogs card" id="dogs">
-        <h2>Dogs</h2>
-        <div class="dogs-gallery">
-            <img src="autism.gif" alt="dog gif 1" class="dogs-thumb">
-            <img src="you-gotta-be-quicker-than-that.gif" alt="dog gif 2" class="dogs-thumb">
-            <img src="NPH_MRI_272_GILD.gif" alt="dog gif 3" class="dogs-thumb">
-        </div>
-        <div class="dogs-grid">
-            <article class="dog-card">
-                <div class="dog-photo">🐶</div>
-                <h3 class="dog-name">Bosse</h3>
-                <p class="dog-desc">En glad kompis som älskar att leka apport och promenera.</p>
-            </article>
-            <article class="dog-card">
-                <div class="dog-photo">🐕‍🦺</div>
-                <h3 class="dog-name">Luna</h3>
-                <p class="dog-desc">Kreativ och nyfiken — perfekt på utforskning och agility.</p>
-            </article>
-            <article class="dog-card">
-                <div class="dog-photo">🐩</div>
-                <h3 class="dog-name">Rex</h3>
-                <p class="dog-desc">Lojal och klok. Bra sällskap och lätt att träna.</p>
-            </article>
-        </div>
-    </section>
     <footer id="footer">
         <a href="tel:+46733272603">46733272603</a>
         <a href="togerraka@gmail.com">togerraka@gmail.com</a>
     </footer>
-    <!-- Decorative flying dogs (purely visual) -->
-    <div class="flying-dog dog-1" aria-hidden="true">🐶</div>
-    <div class="flying-dog dog-2" aria-hidden="true">🐕</div>
-    <div class="flying-dog dog-3" aria-hidden="true">🐩</div>
-    <!-- Fat runner (decorative) -->
-    <div class="runner" aria-hidden="true">
-        <div class="fatman">🏃‍♂️</div>
-    </div>
 
-    <div class="runner-control container">
-        <label><input id="runner-mute" type="checkbox"> Mute runner sounds</label>
-    </div>
-        <script>
-            // Simple synthesized bark using Web Audio API
-            (function(){
-                const AudioCtx = window.AudioContext || window.webkitAudioContext;
-                let ctx;
-                function ensureCtx(){ if(!ctx) ctx = new AudioCtx(); return ctx; }
-
-                function playBark(){
-                    const c = ensureCtx();
-                    // short noise burst + pitch envelope to mimic a bark
-                    const noise = c.createBufferSource();
-                    const buffer = c.createBuffer(1, c.sampleRate * 0.3, c.sampleRate);
-                    const data = buffer.getChannelData(0);
-                    for(let i=0;i<data.length;i++) data[i] = (Math.random()*2-1) * Math.exp(-i/data.length*6);
-                    noise.buffer = buffer;
-
-                    const noiseFilter = c.createBiquadFilter();
-                    noiseFilter.type = 'bandpass';
-                    noiseFilter.frequency.value = 1000;
-
-                    const env = c.createGain();
-                    env.gain.setValueAtTime(0.0001, c.currentTime);
-                    env.gain.exponentialRampToValueAtTime(1.0, c.currentTime + 0.01);
-                    env.gain.exponentialRampToValueAtTime(0.001, c.currentTime + 0.25);
-
-                    const pitch = c.createOscillator();
-                    pitch.type = 'sawtooth';
-                    pitch.frequency.setValueAtTime(220, c.currentTime);
-                    pitch.frequency.exponentialRampToValueAtTime(80, c.currentTime + 0.2);
-
-                    const pitchGain = c.createGain();
-                    pitchGain.gain.setValueAtTime(0.6, c.currentTime);
-                    pitchGain.gain.exponentialRampToValueAtTime(0.001, c.currentTime + 0.25);
-
-                    noise.connect(noiseFilter).connect(env).connect(c.destination);
-                    pitch.connect(pitchGain).connect(c.destination);
-
-                    noise.start();
-                    pitch.start();
-                    noise.stop(c.currentTime + 0.28);
-                    pitch.stop(c.currentTime + 0.28);
-                }
-
-                const btn = document.getElementById('bark-btn');
-                const auto = document.getElementById('auto-bark');
-                if(btn){
-                    btn.addEventListener('click', ()=>{
-                        btn.setAttribute('aria-pressed','true');
-                        playBark();
-                        setTimeout(()=>btn.setAttribute('aria-pressed','false'), 300);
-                    });
-                }
-
-                // If user enables auto-bark, play whenever a flying dog animation restarts by observing animationiteration
-                const dogs = document.querySelectorAll('.flying-dog');
-                dogs.forEach(d=>{
-                    d.addEventListener('animationiteration', ()=>{
-                        if(auto && auto.checked){ playBark(); }
-                    });
-                });
-            })();
-        </script>
-        <script>
-            // Runner weird sounds
-            (function(){
-                const AudioCtx = window.AudioContext || window.webkitAudioContext;
-                let ctx;
-                function ensureCtx(){ if(!ctx) ctx = new AudioCtx(); return ctx; }
-
-                function playWeird(){
-                    const c = ensureCtx();
-                    const o = c.createOscillator();
-                    const g = c.createGain();
-                    o.type = 'triangle';
-                    const now = c.currentTime;
-                    o.frequency.setValueAtTime(220 + Math.random()*200, now);
-                    o.frequency.exponentialRampToValueAtTime(60 + Math.random()*120, now + 0.25 + Math.random()*0.15);
-                    g.gain.setValueAtTime(0.0001, now);
-                    g.gain.exponentialRampToValueAtTime(0.6, now + 0.02);
-                    g.gain.exponentialRampToValueAtTime(0.001, now + 0.38);
-                    o.connect(g).connect(c.destination);
-                    o.start(); o.stop(now + 0.4 + Math.random()*0.2);
-                }
-
-                const runner = document.querySelector('.runner');
-                const mute = document.getElementById('runner-mute');
-                const fat = document.querySelector('.fatman');
-
-                function onIteration(){
-                    if(mute && mute.checked) return;
-                    // visual bounce
-                    if(fat){ fat.classList.remove('bounce'); void fat.offsetWidth; fat.classList.add('bounce'); }
-                    // play sound
-                    playWeird();
-                }
-
-                if(runner){
-                    runner.addEventListener('animationiteration', onIteration);
-                }
-
-                // respect reduced motion: disable sound triggers if user requests reduced motion
-                const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-                if(mq && mq.matches){ if(runner) runner.removeEventListener('animationiteration', onIteration); }
-            })();
-        </script>
-    
 </body>
-</html>
