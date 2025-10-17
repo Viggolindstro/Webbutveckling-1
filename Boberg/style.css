@@ -1,0 +1,19 @@
+*{
+padding : 0px;
+margin: 0px;
+}
+
+header {
+  background-color:aqua;
+  padding: 16px;
+}
+
+ul {
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+li {
+    list-style-type: style none;
+}
+
