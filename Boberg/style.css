@@ -13,7 +13,8 @@ display:flex;
 flex-direction:column;
 gap:12px;
 }
+
 li {
-    list-style-type: style none;
+    list-style: none;
 }
 
