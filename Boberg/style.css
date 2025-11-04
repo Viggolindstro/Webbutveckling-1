@@ -2,12 +2,22 @@
 padding : 0px;
 margin: 0px;
 }
-
-header {
-  background-color:aqua;
-  padding: 16px;
+button {
+  border:none;
+  background: transparent;
 }
-
+header {
+  background-color:#00ffff;
+  padding: 16px;
+  min-height: calc(100vh - 32px);
+}
+nav {
+  position: relative;
+  display: block;
+}
+.hidden {
+  display: none;
+}
 ul {
 display:flex;
 flex-direction:column;
@@ -16,5 +26,20 @@ gap:12px;
 
 li {
     list-style: none;
+}
+.social-img {
+  max-width: 32px;
+}
+a {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.menu-close-beta {
+  width: 32px;
+  position: absolute;
+  top: 0; 
+  right: 0;
 }
 
