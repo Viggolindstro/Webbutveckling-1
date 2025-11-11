@@ -8,26 +8,40 @@ button {
     background: transparent;
 }
  
-header {
-    /*background-color: burlywood */
-    min-height: calc(100vh - 32px);
-}
  
 nav {
     position: relative;
-    display: block;
     background-color: #f1f1f1;
-    padding: 32px;
+    padding: 16px;
+}
+.nav-close {
+    align-items: center;
+    display: flex;
+
+}
+
+header nav a:first-child {
+   position: relative;
+   text-decoration: none;
+   color: #116;
+   font-weight: 600;
+   font-family: "Inter", sans-serif;
+   font-optical-sizing: auto;
+   font-style: normal;
+   margin: bottom 16px;
 }
  
 .hidden {
     display: none;
 }
- 
+ .top-0 {
+    top: 0;
+ }
 ul {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    margin-top: 32px;
 }
  
 li {
@@ -39,15 +53,12 @@ li {
 }
  
 a {
-   font-family: "Inter", sans-serif;
-   font-optical-sizing: auto;
    font-weight: 400;
-   font-style: normal;
 }
  
 .menu-btn {
     width: 32px;
     position: absolute;
-    top: 16px;
-    right: 16px;
+    right: 0px;
+    top: 0px;
 }

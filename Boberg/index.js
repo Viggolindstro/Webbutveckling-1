@@ -1,13 +1,18 @@
-const mobileNav = document.querySelector(".mobile-nav");
-const hamburgerBtn = document.querySelector("#menu-open");
+const navbar = document.querySelector("nav");
+const mobileNav = document.querySelector
+(".mobile-nav");
+const hamburgerBtn = document.querySelector
+("#menu-open");
  
 const closeMenu = () => {
-    mobileNav.classList.add("hidden");
+    mobileNav.classList.add("hidden"); 
+    mobileNav.classList.add("nav-close");
     hamburgerBtn.classList.remove("hidden");
 }
  
 const openMenu = () => {
     hamburgerBtn.classList.add("hidden");
+    mobileNav.classList.remove("nav-close");
     mobileNav.classList.remove("hidden");
 }    
  
