@@ -1,84 +1,111 @@
 * {
-padding: 0;
-margin: 0;
-font-family: "Inter", sans-serif;
-font-optical-sizing: auto;
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    background-color: aquamarine;
 }
-
+ 
 button {
-border: none;
-background: transparent;
+    border: none;
+    background: transparent;
 }
-
+ 
+ 
 nav {
-position: relative;
-background-color: #f1f1f1;
-padding: 16px;
+    position: relative;
+    background-color: #f1f1f1;
+    padding: 16px;
+    
 }
-
+ 
 .nav-closed {
-display: flex;
-align-items: center;
-}
-
-header nav a:first-child {
-position: relative;
-text-decoration: none;
-color: #111111;
-font-weight: 600;
-}
-
-.hidden {
-display: none;
-}
-
-.top-0 {
-top: 0;
-}
-
-ul {
-display: flex;
-flex-direction: column;
-gap: 12px;
-margin-top: 32px;
-}
-
-li {
-list-style: none;
-}
-
-a {
-font-weight: 400;
-}
-
-.social-img {
-max-width: 32px;
-}
-
-.menu-btn {
-width: 32px;
-position: absolute;
-right: 0;
-}
-
-.news-grid {
-  padding: 16px;
   display: flex;
-  flex-direction: column;
-  gap: 32px;
+  align-items: center;
 }
-
+ 
+header nav a:first-child {
+  position: relative;
+  text-decoration: none;
+  color: #111111;
+  font-weight: 600;
+}
+ 
+ 
+.hidden {
+    display: none;
+}
+ 
+.top-0 {
+  top: 0;
+}
+ 
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 32px;
+}
+ 
+li {
+    list-style: none;
+}
+ 
+a {
+    font-weight: 400;
+    font-style: normal;
+}
+ 
+.social-img {
+    max-width: 32px;
+}
+ 
+.menu-btn {
+    width: 32px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+}
+ 
+.news-grid {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+ 
 .news-card {
-  border: 1px solid #323232;
-  padding: 8px;
-  border-radius: 12px;
+    border: 1px solid #3f3f3f;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: aquamarine;
 }
-
+ 
 .news-image {
-  max-width: 100%;
-  border-radius: 12px;
+    max-width: 100%;
+    border-radius: 4px;
 }
-
+ 
 .news-title {
-  padding-top: 16px;
+    padding-top: 16px;
+ 
 }
+ 
+.menu-open {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color:aquamarine;
+}
+ 
+.school-link {
+    text-decoration: none;
+}
+ 
+a{
+    text-decoration: none;
+}
+.wubbalubba-logo {
+    max-width: 100px;
+    margin-right: 16px;
+} 
