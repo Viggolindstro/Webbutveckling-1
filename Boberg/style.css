@@ -3,7 +3,6 @@
     margin: 0;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    background-color: aquamarine;
 }
  
 button {
@@ -83,7 +82,7 @@ a {
  
 .news-image {
     max-width: 100%;
-    border-radius: 4px;
+    border-radius: 12px;
 }
  
 .news-title {
@@ -109,3 +108,22 @@ a{
     max-width: 100px;
     margin-right: 16px;
 } 
+/* Styling för artikeldetaljsidan */
+.news-container {
+max-width: 800px;
+margin: 0 auto;
+padding: 16px;
+display:flex;
+flex-direction: column;
+gap: 24px;
+}
+
+.back-link {
+color:#111111;
+text-decoration: none;
+font-weight: 500;
+font-size: 1.1rem;
+}
+.back-link:hover {
+text-decoration: underline;
+}
