@@ -102,6 +102,17 @@ if (newsItem) {
 
 if (document.querySelector(".news-grid")) renderNews();
 if (document.querySelector(".news-content")) renderNewsDetail();
-
+ 
+function toggleText() {
+    const points = document.getElementById("points");
+    const moreText = document.getElementById("moreText");
+    const button = document.getElementById("textButton");
+ 
+    const isHidden = moreText.style.display === "none";
+ 
+    moreText.style.display = isHidden ? "inline" : "none";
+    points.style.display = isHidden ? "none" : "inline";
+    button.innerHTML = isHidden ? "Visa mindre" : "Visa fler";
+ }
  
  
