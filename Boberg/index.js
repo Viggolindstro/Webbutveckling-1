@@ -114,5 +114,37 @@ function toggleText() {
     points.style.display = isHidden ? "none" : "inline";
     button.innerHTML = isHidden ? "Visa mindre" : "Visa fler";
  }
+ const handelser = [
+    {
+        dag: "10", manad: "DEC", titel: "Nobeldag/UF-mässa", veckodag: "Onsdag", statusColor: "yellow"
+    },
+    {
+         dag: "19", manad: "DEC", titel: "Julavslutning", veckodag: "Fredag", statusColor: "red"
+    },
+    {
+         dag: "20", manad: "DEC", titel: "Jullov", veckodag: "Lördag", statusColor: "green"
+         dag: "07", manad: "JAN"
+    },
+    {
+        dag: "09", manad: "FEB", titel: "Studiedag", veckodag: "Måndag", statusColor: "green"
+    },
+    {
+        dag: "02-08", manad: "MAR", titel: "Sportlov", veckodag: "Måndag", statusColor: "green"
+    },
+    {
+dag: "03-12", manad: "APR", titel: "Påsklov", veckodag: "Fredag", statusColor: "green"
+    },
+    {
+dag: "30", manad: "APR", titel: "Lovdag", veckodag: "Torsdag", statusColor: "green"
+    },
+    {
+    dag: "15", manad: "MAJ", titel: "Studiedag", veckodag: "Fredag", statusColor: "green"
+    },
+    {
+        dag: "12", manad: "JUN", titel: "Avslutning/Student", veckodag: "Onsdag", statusColor: "red"
+    },
+   
+ ];
  
+   let visadeHandelser = 3;
  
