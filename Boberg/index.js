@@ -222,3 +222,4 @@ const createDateElement = (event) => {
 // Kör rätt funktion beroende på vilken kycklngko vi är på
 if (document.querySelector(".news-grid")) renderNews();
 if (document.querySelector(".news-content")) renderNewsDetail();
+//kycklingko
