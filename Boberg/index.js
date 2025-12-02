@@ -3,7 +3,7 @@ const mobileNav = document.querySelector(".mobile-nav");
 const hamburgerBtn = document.querySelector("#menu-open");
 const xBtn = document.querySelector("#menu-close");
  
- 
+ let showEvents = 3;
 const news = [
     {
         id: "1",
@@ -24,9 +24,52 @@ const news = [
         img: "./img/img2.webp",
         title: "Föräldrarmöte åk 1 9/9",
         date: "2 september 2025",
-        content: "Till vårdnadshavare för elever i årskurs 1Välkomna till föräldramöte!Ni är varmt välkomna till skolan för att träffa rektor, mentorer och en del annan personal. Vi vill gärna ha ett nära samarbete med er så att vi tillsammans kan hjälpa eleverna att lyckas med sin skolgång. Det är första terminen för era ungdomar i en ny skolform som ställer annorlunda krav och har andra förutsättningar än tidigare.Tid:Tisdag 9 september 2025, kl. 18.30.Plats:Aulan, Bobergsgymnasiet (mitt i huset, en trappa upp från huvudentrén).Vi kommer först ses i helgrupp för en del allmän information. Efter det går ni vidare med mentorerna för ytterligare information och samtal om just er klass. Under kvällen kommer vi att tala om våra regler och rutiner, informera om programmen i gymnasieskolan och hur arbetet med elevernas lärande går till på Bobergsgymnasiet. Naturligtvis bjuder vi även på fika. Välkomna! / Jennie Stadling Wilsson, rektor Bobergsgymnasiet.Vi ber er fylla i nedanstående talong som lämnas till mentor senast torsdag 4/9. Tack!",
-    }
+        content:"Till vårdnadshavare för elever i årskurs 1Välkomna till föräldramöte!Ni är varmt välkomna till skolan för att träffa rektor, mentorer och en del annan personal. Vi vill gärna ha ett nära samarbete med er så att vi tillsammans kan hjälpa eleverna att lyckas med sin skolgång. Det är första terminen för era ungdomar i en ny skolform som ställer annorlunda krav och har andra förutsättningar än tidigare.Tid:Tisdag 9 september 2025, kl. 18.30.Plats:Aulan, Bobergsgymnasiet (mitt i huset, en trappa upp från huvudentrén).Vi kommer först ses i helgrupp för en del allmän information. Efter det går ni vidare med mentorerna för ytterligare information och samtal om just er klass. Under kvällen kommer vi att tala om våra regler och rutiner, informera om programmen i gymnasieskolan och hur arbetet med elevernas lärande går till på Bobergsgymnasiet. Naturligtvis bjuder vi även på fika. Välkomna! / Jennie Stadling Wilsson, rektor Bobergsgymnasiet.Vi ber er fylla i nedanstående talong som lämnas till mentor senast torsdag 4/9. Tack!",
+    },
 ];
+const events = [
+    {
+    day: 10,
+    month: "DEC",
+     title: "Nobelfirande", weekday: "Wednesday", statusColor: "yellow",
+},
+{
+    day: 10,
+    month: "DEC",
+    title: "Uf-mässa-med-försäljning",
+    weekday: "onsdag",
+    statusColor: "orange",
+},
+{
+    day: 2,
+    month: "SEP",
+    title: "Föräldrarmöte åk 1 9/9",
+    weekday: "Monday",
+    statusColor: "green",
+},
+{
+    day: 2,
+    month: "SEP",
+    title: "Föräldrarmöte åk 1 9/9",
+    weekday: "Monday",
+    statusColor: "green",
+},
+{
+    day: 2,
+    month: "SEP",
+    title: "Föräldrarmöte åk 1 9/9",
+    weekday: "Monday",
+    statusColor: "green",
+},
+{
+    day: 2,
+    month: "SEP",
+    title: "Föräldrarmöte åk 1 9/9",
+    weekday: "Monday",
+    statusColor: "green",
+},
+];
+    
  
 const closeMenu = () => {
     mobileNav.classList.add("hidden");
@@ -114,37 +157,12 @@ function toggleText() {
     points.style.display = isHidden ? "none" : "inline";
     button.innerHTML = isHidden ? "Visa mindre" : "Visa fler";
  }
- const handelser = [
-    {
-        dag: "10", manad: "DEC", titel: "Nobeldag/UF-mässa", veckodag: "Onsdag", statusColor: "yellow"
-    },
-    {
-         dag: "19", manad: "DEC", titel: "Julavslutning", veckodag: "Fredag", statusColor: "red"
-    },
-    {
-         dag: "20", manad: "DEC", titel: "Jullov", veckodag: "Lördag", statusColor: "green"
-         dag: "07", manad: "JAN"
-    },
-    {
-        dag: "09", manad: "FEB", titel: "Studiedag", veckodag: "Måndag", statusColor: "green"
-    },
-    {
-        dag: "02-08", manad: "MAR", titel: "Sportlov", veckodag: "Måndag", statusColor: "green"
-    },
-    {
-dag: "03-12", manad: "APR", titel: "Påsklov", veckodag: "Fredag", statusColor: "green"
-    },
-    {
-dag: "30", manad: "APR", titel: "Lovdag", veckodag: "Torsdag", statusColor: "green"
-    },
-    {
-    dag: "15", manad: "MAJ", titel: "Studiedag", veckodag: "Fredag", statusColor: "green"
-    },
-    {
-        dag: "12", manad: "JUN", titel: "Avslutning/Student", veckodag: "Onsdag", statusColor: "red"
-    },
-   
- ];
- 
-   let visadeHandelser = 3;
- 
+// const handelser = [{dag: "10", manad: "DEC", titel: "Nobeldag/UF-mässa", veckodag: "Onsdag", statusColor: "yellow" } {   dag: "19", manad: "DEC", titel: "Julavslutning", veckodag: "Fredag", statusColor: "red" }, {      dag: "20", manad: "DEC", titel: "Jullov", veckodag: "Lördag", statusColor: "green",      dag: "07", manad: "JAN" },  {      dag: "09", manad: "FEB", titel: "Studiedag", veckodag: "Måndag", statusColor: "green" }, {     dag: "02-08", manad: "MAR", titel: "Sportlov", veckodag: "Måndag", statusColor: "green" }, dag: "03-12", manad: "APR", titel: "Påsklov", veckodag: "Fredag", statusColor: "green" }, {dag: "30", manad: "APR", titel: "Lovdag", veckodag: "Torsdag", statusColor: "green" }, { dag: "15", manad: "MAJ", titel: "Studiedag", veckodag: "Fredag", statusColor: "green" },{ dag: "12", manad: "JUN", titel: "Avslutning/Student", veckodag: "Onsdag",statusColor: "red},
+   //];
+ const createDateElement = (event) => {
+    // kolla om händelsen har ett slutdatum
+    if (event.endday && event.endmonth) {
+        // kolla om eventkon är inom samma kycklingko
+        if (event.month === event.endmonth) {
+    }
+ }};
