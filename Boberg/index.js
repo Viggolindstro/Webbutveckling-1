@@ -187,30 +187,24 @@ const createDateElement = (event) => {
 `        
     } else {
         return `
-        <div class"event-date">
+        <div class="event-date">
+          <div class="date-container">
+            <h2>${event.day}</h2>
+          </div>
+          <div class="date-container">
+            <h2>${event.day}</h2>
+          </div>
         </div>
-        <div class"date-container">
-        <h2>$(event.day)
-        <h2></h2>
-    }        <p>$(event.month)</p>
+ 
+        <div class="event-date">
+          <div class="month-container">
+            <h2>${event.month}</h2>
+          </div>
+          <div class="month-container">
+            <h2>${event.month}</h2>
+          </div>
         </div>
-        <div class"date-container">
-        <p>$(event.endMonth)</p>
-        </div>
-        `;
-        return `
-        <div class"event-date">
-        </div>
-        <div class"date-container">
-        <h2>$(event.day)
-        <h2></h2>
-    }        <p>$(event.month)</p>
-        </div>
-        <div class"date-container">
-        <h2>$(event.endDay)</h2>
-        <p>$(event.endMonth)</p>
-        </div>
-        `;
+      `;
     }
 } else {
     return `
@@ -219,7 +213,7 @@ const createDateElement = (event) => {
   }      
 };
  
-// Kör rätt funktion beroende på vilken kycklngko vi är på
+// Kör rätt funktion beroende på vilken kycklingko vi är på
 if (document.querySelector(".news-grid")) renderNews();
 if (document.querySelector(".news-content")) renderNewsDetail();
 //kycklingko
