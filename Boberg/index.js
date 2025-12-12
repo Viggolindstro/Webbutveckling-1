@@ -5,6 +5,7 @@ const hamburgerBtn = document.querySelector("#menu-open");
 const closeBtn = document.querySelector("#menu-close");
  
 let shownEvents = 3;
+
  
 const news = [
   {
@@ -65,11 +66,11 @@ const events = [
     statusColor: "yellow",
   },
   {
-    day: "28",
-    month: "JAN",
+    day: "09",
+    month: "FEB",
     endDay: "30",
     endMonth: "JAN",
-    title: "Nobeldag/UF-mässa",
+    title: "Studiedag",
     weekday: "onsdag",
     statusColor: "yellow",
   },
@@ -179,9 +180,11 @@ const createDateElement = (event) => {
       //Om samma månad, visa kycklingko i en ruta
       return`
         <time class="event-date" datetime="${event.day}-${event.month}">
+        <div class="day-wrapper">
          <span class="date-day">${event.day}</span>
          <span class="date-seperator">-</span>
          <span class="date-day">${event.endDay}</span>
+         </div>
          <span class="date-month">${event.month}</span>
         </time>
 `        
@@ -204,6 +207,12 @@ const createDateElement = (event) => {
   <span class="date-day">${event.day}</span>
   <span class="date-month">${event.month}</span>
 </time>
+
+<time class="event-date" datetime="${event.day}-${event.month}">
+  <span class="date-day">${event.endDay}</span>
+  <span class="date-month">${event.endMonth}</span>
+</time>
+
     `
   }      
 };
@@ -222,18 +231,23 @@ eventsToshow.forEach((event) => {
     eventElement.className = "event-item"; 
     const datehtml = createDateElement(event);
     eventElement.innerHTML = `
-     <article>
-      ${datehtml}
-      <section class="event-info">
-<header class="event-title-row">
-<h3 class="event-title">${event.title}</h3>
-<span class"status-circle status-${event.statusColor}" area-label="Status":
-</span>
-     </header>
+    
+ <article class="event-card">
+ <hr />
+ <div class="date-wrapper">
+${datehtml}
+</div>
+<section class="event-info">
+ <header class="event-title-row">
+   <h3 class="event-title">${event.title}</h3>
+   <div class"status-circle status-${event.statusColor}" aria-label="Status":
+   </div>
+  </header>
      <time class="event-weekday" datetime="${event.weekday}">${event.weekday}</time>
       </section>
       <a href="#" class="event-details">Detaljer</a>
-     </article>
+      <hr class="hr" />
+</article>
      `;
      container.appendChild(eventElement);
 });
@@ -248,12 +262,17 @@ const handleShowMore = () => {
 
     //Dölj knappen om alla händelser visas
     if (shownEvents >= events.length) {
-        const btn = document.querySelector("#show-more-btn");
+        const btn = document.querySelector(".show-more-btn");
         classList.add("hidden");
     }
 };
+const showmoreBtn = document.querySelector(".show-more-btn");
+if (showmoreBtn) {
+  showmoreBtn.addEventListener("click", handleShowMore);
+}
  
 // Kör rätt funktion beroende på vilken kycklingko vi är på
 if (document.querySelector(".news-grid")) renderNews();
 if (document.querySelector(".news-content")) renderNewsDetail();
+if (document.querySelector(".event-list"))renderEvents();
 

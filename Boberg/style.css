@@ -70,6 +70,7 @@ a {
     padding: 16px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 32px;
 }
  
@@ -77,12 +78,17 @@ a {
     border: 1px solid #3f3f3f;
     padding: 8px;
     border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.021);
+    background-color: rgba(102, 112, 8, 0.555);
+    width: 100%;
+    max-width: 300px;
 }
  
 .news-image {
-    max-width: 100%;
+    width: 100%;
+    max-width: 300px;
     border-radius: 12px;
+    max-height: 170px;
+    object-fit: cover;
 }
  
 .news-title {
@@ -127,5 +133,100 @@ font-size: 1.1rem;
 .back-link:hover {
 text-decoration: underline;
 }
+/* Event.list kycklingko*/
+.event-article {
+    padding: 16px;
+    background-color: brown;
+    display:flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.event-list {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
+.date-wrapper {
+    padding: 10px;
+    display:flex;
+    gap: 16px;
+}
 
+.event-card {
+    background-color:rgb(242, 255, 0);
+}
+
+.event-date {
+    background-color:aquamarine;
+    display: flex; 
+    flex-direction: column;
+    border-radius: 4px;
+    color:rgb(49, 199, 149);
+    font-weight: 700;
+    align-items: center;
+}
+
+.date-day {
+    padding: 8px;
+}
+
+.date-wrapper {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 2px 4px;
+    gap: 16px;
+}
+
+.date-month {
+    padding: 8px;
+    border-radius: 0px 8px 0px 0px;
+    border-radius: 8px 0px;
+    background-color:aqua;
+    min-width: calc(100% - 16px);
+    text-align: center;
+}
+
+.event-info {
+    background-color: #185885;
+    padding: 16px;
+}
+.event-title-row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.status-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+.status-green {
+    background-color: rgb(75, 238, 0) 
+}
+
+.status-yellow {
+    background-color: rgb(228, 205, 0); 
+}
+
+.status-red {
+    background-color: rgb(228, 11, 11); 
+}
+
+.event-details {
+    margin: 16px;
+    color: #1111;
+}
+
+.hr {
+    margin-top: 16px;
+}
+
+@media (min-width: 640px) {
+    .news-grid {
+        background-color: brown;
+    }
+}
